@@ -6,7 +6,7 @@
 package TrafficLight;
 
 import java.awt.Color;
-
+import stGraph.Canvas;
 
 public class Lampe {
     private Color col;
@@ -14,7 +14,7 @@ public class Lampe {
     private int y;
     
     public Lampe(int x, int y){
-        col = Color.red;
+        col = Color.gray;
         this.x = x;
         this.y = y;
     }
@@ -23,5 +23,9 @@ public class Lampe {
         this.col = col;
     }
     
-    
+    public void display(){
+        Canvas.noBorder();
+        Canvas.setColor(col);
+        Canvas.circle(x, y, 20);
+    }
 }

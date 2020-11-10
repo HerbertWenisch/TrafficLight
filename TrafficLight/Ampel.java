@@ -5,7 +5,7 @@
 
 package TrafficLight;
 import java.awt.Color;
-
+import stGraph.Canvas;
 
 public class Ampel {
     private int x;
@@ -32,5 +32,13 @@ public class Ampel {
         lUnten.setCol(Color.black);
     }
     
-    
+    public void display(){
+        // Gehäuse:
+        Canvas.setColor(Color.lightGray);
+        Canvas.rect(0,0,60,160);
+        // Lampen:
+        lOben.display();
+        lMitte.display();
+        lUnten.display();
+    }
 }
