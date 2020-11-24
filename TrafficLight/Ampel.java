@@ -28,8 +28,8 @@ public class Ampel {
     public void setRed(){
         phase = "red";
         lOben.setCol(Color.red);
-        lMitte.setCol(Color.black);
-        lUnten.setCol(Color.black);
+        lMitte.setCol(Color.gray);
+        lUnten.setCol(Color.gray);
     }
     
     public void display(){
