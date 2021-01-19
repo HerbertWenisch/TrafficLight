@@ -1,6 +1,7 @@
 
 package stGraph;
 import TrafficLight.Ampel;
+import TrafficLight.Timer;
 
 
 /** <h1> template methods setup() and draw() like in processing </h1> */
@@ -20,11 +21,11 @@ import TrafficLight.Ampel;
    
    void draw(){
      Canvas.clear();
+     if(Timer.isFinished()) ampel.next();
      ampel.display();
    }
    
    void mousePressed(){}
-   
    
    
    // ----------------------------------------------------------
